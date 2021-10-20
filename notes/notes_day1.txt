@@ -1,0 +1,167 @@
+1. JS Execution Cycle:
+	stages:
+		a. preparation stage: only variable and function declarations are considered
+		b. execution stage: assignments, calls etc. are considered
+
+2. ECS: Execution context stack
+   Global function execution
+   Other function execution (at the top of the Global Function Execution)
+
+3. ECO: Execution Context Object
+	properties:
+	a. this: refers to the object attached with thin function, where data can be stored as object data. even after function execution is over. that object stays.
+
+	b. scope: refers to an array object containing copy of the variables and their values (declared with var/let keyword) of the own as well as parent scopes. does no refer to the inner scope variables and their values (since an outer scope does not have access to inner scope)
+
+	c. variableObject: refers to the object, which is used for local variable and function hoisting 
+
+4. object creation:
+	a. object literal technique
+	b. constructor function technique
+
+5. Prototype:
+	for every function (either written using declaration or expression technique) is assigned to another object known as prototype object of that function. irrespective of the fact that whether you are going to call it or not. used for inheritance.
+	every object created by calling this function (along with new keyword) will be linked to the prototype object of the function.
+
+
+function person(....){}
+
+clg(person.prototype)
+var obj = new person(....)
+clg(obj.__proto__)
+
+6. Module: a JS/TS/NS file
+
+7. module formats:
+a. Common JS format: 
+   exports: must be given a Object or directly a member of the file
+   method: require(path)
+b. AMD (asynchronous module definition)
+define(,[],function(){
+})
+c. UMD (Universal module definition)
+d. ES6 (import/export)
+export function person(....){}
+
+import {person} from './models/person'
+e. IIFE
+......
+
+8. module loaders: resolve dependencies, load the files
+a. common js module loader
+b. requirejs
+c. systemjs
+   
+
+
+
+employee type: 
+	value properties:
+	name, id, basic, da, hra
+	functional property:
+	float calculateSalary()
+
+how many records?
+create as many objects
+and put them into an array
+
+
+Module {
+    id: '.',
+    path: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src',    
+    exports: {},
+    parent: null,
+    filename: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\index.js',
+    loaded: false,
+    children: [],
+    paths: [
+      'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\node_modules',
+      'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\node_modules',
+      'E:\\g7cr-training\\codes\\day-1\\node_modules',
+      'E:\\g7cr-training\\codes\\node_modules',
+      'E:\\g7cr-training\\node_modules',
+      'E:\\node_modules'
+    ]
+  }
+
+
+
+<ref *1> Module {
+  id: '.',
+  path: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src',  
+  exports: {},
+  parent: null,                                                         \\index.js',
+  filename: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\index.js',
+  loaded: false,
+  children: [                                                           odules',    
+    Module {                                                            s',
+      id: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\models\\employee.js',
+      path: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\models',
+      exports: [Object],
+PS E:\g7cr-training\codes\day-1\emp-management-system> node .\src\index.js
+<ref *1> Module {
+  id: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\models\\employee.js',
+  path: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\models',
+  exports: { employee: [Function: employee] },
+  parent: Module {
+    id: '.',
+    path: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src',
+    exports: {},
+    parent: null,
+    filename: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\index.js',   
+    loaded: false,
+    children: [ [Circular *1] ],
+    paths: [
+      'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\node_modules',       
+      'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\node_modules',
+      'E:\\g7cr-training\\codes\\day-1\\node_modules',
+      'E:\\g7cr-training\\codes\\node_modules',
+      'E:\\g7cr-training\\node_modules',
+      'E:\\node_modules'
+    ]
+  },
+  filename: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\models\\employee.js',
+  loaded: false,
+  children: [],
+  paths: [
+    'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\models\\node_modules',
+    'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\node_modules',
+    'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\node_modules',
+    'E:\\g7cr-training\\codes\\day-1\\node_modules',
+    'E:\\g7cr-training\\codes\\node_modules',
+    'E:\\g7cr-training\\node_modules',
+    'E:\\node_modules'
+  ]
+}
+<ref *1> Module {
+  id: '.',
+  path: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src',
+  exports: {},
+  parent: null,
+  filename: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\index.js',
+  loaded: false,
+  children: [
+    Module {
+      id: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\models\\employee.js',
+      path: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\models',
+      exports: [Object],
+      parent: [Circular *1],
+      filename: 'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\models\\employee.js',
+      loaded: true,
+      children: [],
+      paths: [Array]
+    }
+  ],
+  paths: [
+    'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\src\\node_modules',
+    'E:\\g7cr-training\\codes\\day-1\\emp-management-system\\node_modules',
+    'E:\\g7cr-training\\codes\\day-1\\node_modules',
+    'E:\\g7cr-training\\codes\\node_modules',
+    'E:\\g7cr-training\\node_modules',
+    'E:\\node_modules'
+  ]
+}
+
+
+
+5. 
