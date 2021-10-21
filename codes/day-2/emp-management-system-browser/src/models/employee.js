@@ -4,11 +4,8 @@ export function employee(name, id, basic, da, hra) {
     this.basicPay = basic
     this.hraPay = hra
     this.daPay = da
-    this.calculateSalary = function () {
-        return this.basicPay + this.daPay + this.hraPay
+    this.totalSalary = 0
+    this.calculateSalary = () => {
+        this.totalSalary = this.basicPay + this.daPay + this.hraPay
     }
 }
-
-// module.exports = {
-//     employee: employee
-// }

@@ -1,0 +1,25 @@
+1. code is written using new version of JS (>=ES6)
+2. code is wriiten using ES6 module format
+
+transformation of my source code
+	- into older version of JS
+	- module to be in AMD format
+
+transpiler:
+	a. typescript transpiler
+	b. babel (for JS)
+
+npm i @babel/core @babel/cli --save-dev (-D)
+npm i @babel/core @babel/cli --save 
+npm i @babel/preset-env -D
+npm i @babel/plugin-transform-modules-amd -D
+
+src/**/*.js
+
+dist or build/**/*.js
+
+>node_modules/.bin/babel src --out-dir dist
+
+https://json-schema.org/
+
+npm init

@@ -1,10 +1,6 @@
 //import repository, employee here
-// const employeesExports = require('../repository/employees')
-// const employeeExports = require('../models/employee')
-
-// const employees = employeesExports.employees
-// const employee = employeeExports.employee
-
+import { employees } from "../repository/employees";
+import { employee } from "../models/employee";
 
 function exists(empId) {
     for (let index = 0; index < employees.length; index++) {
@@ -76,11 +72,3 @@ export function get(empId) {
     }
     return found
 }
-
-// module.exports = {
-//     addRecord,
-//     deleteRecord,
-//     updateRecord,
-//     get,
-//     getAll
-// }
