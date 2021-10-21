@@ -58,8 +58,8 @@ import hr from "./models/hr";
 import { employee } from './models/employee'
 
 //debugger
-Object.setPrototypeOf(developer, employee)
-Object.setPrototypeOf(hr, employee)
+Object.setPrototypeOf(developer.prototype, employee.prototype)
+Object.setPrototypeOf(hr.prototype, employee.prototype)
 const hrObj = new hr('abc', 1, 1000, 2000, 3000, 4000)
 hrObj.calculateSalary()
 console.log(hrObj.totalSalary)
