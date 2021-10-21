@@ -23,3 +23,13 @@ dist or build/**/*.js
 https://json-schema.org/
 
 npm init
+
+
+new features in JS (ES6)
+a. const
+b. let
+c. spread operator
+d. rest operator
+e. object destructuring
+f. arrow function
+g. import/export

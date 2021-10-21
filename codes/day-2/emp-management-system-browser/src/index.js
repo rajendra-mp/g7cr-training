@@ -1,4 +1,5 @@
 //manager methods here
+/*
 import { addRecord, deleteRecord, updateRecord, get, getAll } from './operations/employeeManager'
 import { employees } from "./repository/employees";
 
@@ -51,3 +52,14 @@ console.log(singleResProper)
 console.log('repo after seletion')
 console.log(employees)
 */
+
+import developer from "./models/developer";
+import hr from "./models/hr";
+import { employee } from './models/employee'
+
+//debugger
+Object.setPrototypeOf(developer, employee)
+Object.setPrototypeOf(hr, employee)
+const hrObj = new hr('abc', 1, 1000, 2000, 3000, 4000)
+hrObj.calculateSalary()
+console.log(hrObj.totalSalary)

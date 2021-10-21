@@ -5,7 +5,7 @@ export function employee(name, id, basic, da, hra) {
     this.hraPay = hra
     this.daPay = da
     this.totalSalary = 0
-    this.calculateSalary = () => {
-        this.totalSalary = this.basicPay + this.daPay + this.hraPay
-    }
+}
+employee.prototype.calculateSalary = function () {
+    this.totalSalary = this.basicPay + this.daPay + this.hraPay
 }
