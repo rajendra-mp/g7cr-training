@@ -1,0 +1,64 @@
+		JS			
+----------------------------------------------------------------------
+execution:
+	execution context
+	stages
+	execution context stack and object
+	ECO properties: this, scope, variableObject
+variable and function hoisting
+function decalaration and expression
+this keyword (owner of function)
+object creation
+	- object literal syntax
+	- function constructor
+	- class
+	- Object.create()
+prototype and prototype chain
+inheritance in JS and dynamic polymorphism
+call, apply, bind
+closure
+
+ES6 new features:
+const, let, arrow function
+object dstructuring, spread and rest operator
+class, extends and super keywords 
+import and export
+
+**new
+callback
+aynchronous
+	- promise
+
+application development
+---------------------------------------------------------------
+environments:
+	- browser
+	- node
+
+modular code:
+	- modules
+	- module formats (common js, es6, AMD)
+	- module loaders (require js)
+
+transpilation:
+	- transpiler (tsc, babel,...)
+	- transpiler plugins and presets (babel)
+
+config:
+	- package.json
+
+development time loading:
+	- server
+		- lite-server
+	- bundling
+
+production:
+	- bundling
+
+
+const numbers=[1,2,3,4]
+const resultArray = filterNumbers(numbers)
+
+function filterNumbers(arr){
+	//returns a fresh array containing ONLY the even numbers
+}

@@ -1,0 +1,29 @@
+{
+  "name": "ems-app",
+  "version": "1.0.0",
+  "description": "simple ems app",
+  "main": "index.js",
+  "scripts": {
+    "transpile":"babel src --out-dir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joydip-git/g7cr-training.git"
+  },
+  "keywords": [
+    "ES6",
+    "module"
+  ],
+  "author": "joydip",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joydip-git/g7cr-training/issues"
+  },
+  "homepage": "https://github.com/joydip-git/g7cr-training#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/plugin-transform-modules-amd": "^7.14.5",
+    "@babel/preset-env": "^7.15.8"
+  }
+}
