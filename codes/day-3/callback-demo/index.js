@@ -54,3 +54,8 @@ const filteredProductsByName = filterValues(products, (p) => {
 console.log(filteredProductsByName)
 // const str = ''
 // str.toLocaleLowerCase
+
+const res1 = products.filter((p) => p.price > 10000)
+const res2 = numbers.filter((a) => a % 2 === 0)
+console.log(res1)
+console.log(res2)
