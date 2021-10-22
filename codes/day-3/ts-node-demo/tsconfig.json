@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "module": "CommonJS",
+        "target": "ES3",
+        "rootDir": "src",
+        "outDir": "dist",
+        "moduleResolution": "Node",
+        "lib": [
+            "DOM"
+        ]
+    }
+}
