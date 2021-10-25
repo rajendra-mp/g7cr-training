@@ -1,0 +1,11 @@
+[
+    {
+        "name": "dell xps",
+        "code": "dell-1234",
+        "price": 10000,
+        "description": "new product from dell",
+        "imagePath": "",
+        "releaseDate": "1/1/2020",
+        "rating": 4
+    }
+]

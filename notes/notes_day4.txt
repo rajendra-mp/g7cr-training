@@ -9,3 +9,27 @@
 	h. interface is manily for typification, abstraction, loose cpupling in s/w architecture etc.
 	i. interface can be inherited in another interface
 
+
+1. create package.json file
+2. install following packages:
+	a. typescript
+	b. ts-node
+	c. @types/node
+	
+3. create scripts in the package.json file
+4. create tsconfig.json file
+coding:===>
+5. create src folder
+6. add main file: main/index.ts
+7. add rest of the files
+data:===>
+8. create products.json file inside 'data' folder, at the root of the directory
+9. if any model (class/interface repsenting the structure of data) is created, store it in src/models folder
+10. if any manager type (class) is created, place the same in src/manager folder
+modules:===>
+11. use import/export for the module
+
+12. can you NOT hard code the file path?
+.env file
+
+
