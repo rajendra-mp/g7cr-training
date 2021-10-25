@@ -1,0 +1,11 @@
+1. interface in TS
+	a. It is an extra feature in TS. there is no corresponding representation of the same in transpiled code. Interface is simply ignored in transpiled code
+	b. interface is a collection of abstract members. only declaration, but no definition
+	c. data and functionalities can be declared in interface
+	d. can't create object based on interface
+	e. members are by default public, no access specifiers are used with them
+	f. a variable of an interface can store reference of any child class object (upcasting)
+	g. an interface, if implemented in a class, must implement all interface members
+	h. interface is manily for typification, abstraction, loose cpupling in s/w architecture etc.
+	i. interface can be inherited in another interface
+

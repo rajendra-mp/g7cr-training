@@ -1,7 +1,6 @@
-import { Circle } from "./circle";
-import { IShape } from "./shape";
-import { Triangle } from "./triangle";
-
+import { ShapeError } from "./business-exception";
+import { ShapeManager } from "./shapeManager";
+/*
 const circleObj = new Circle(12)
 const traingleObj = new Triangle(12, 3)
 
@@ -28,3 +27,12 @@ function printArea(shapeObjRef: IShape) {
 
 printArea(circleObj)
 printArea(traingleObj)
+*/
+let choice = 3
+try {
+    const manager = new ShapeManager(choice, 0)
+    manager.printArea()
+} catch (error) {
+    let e = error as ShapeError
+    console.log('in index', e.message)
+}
