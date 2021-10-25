@@ -1,4 +1,3 @@
-import { ShapeError } from "./business-exception";
 import { IShape } from "./shape";
 
 export class Square implements IShape {
@@ -10,7 +9,7 @@ export class Square implements IShape {
     }
     calculateArea(): number {
         if (this.side === 0)
-            throw new ShapeError('error while calculating', "1")
+            throw new Error('error while calculating')
 
         return this.Side * this.Side
     }

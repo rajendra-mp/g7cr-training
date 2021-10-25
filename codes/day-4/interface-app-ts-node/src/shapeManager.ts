@@ -21,7 +21,7 @@ export class ShapeManager {
             area = this.shapeObjRef.calculateArea()
             console.log(area)
         } catch (error) {
-            error
+            throw error
         }
     }
 }
