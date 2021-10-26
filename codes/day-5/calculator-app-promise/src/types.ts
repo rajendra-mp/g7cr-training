@@ -1,0 +1,1 @@
+export type calculationOperationType = (x: number, y: number) => number
