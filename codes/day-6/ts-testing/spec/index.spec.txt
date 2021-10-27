@@ -1,0 +1,60 @@
+//import assert = require("assert")
+//import { divide } from "../src"
+import { Calculation } from '../src/index'
+import { DIVIDE_BY_ZERO_ERROR_MESSAGE } from "../src/constants/appconstants"
+import { it } from 'mocha'
+import { expect, AssertionError, assert } from "chai";
+
+describe(
+    'testing add',
+    () => {
+
+        let calcObj: Calculation;
+
+        // before('creating calculation object before all the test cases', () => {
+        //     console.log('creating calculation object before all the test cases')
+        //     calcObj = new Calculation()
+        // })
+
+        // after('nullfying the object reference', () => {
+        //     console.log('nullfying the object reference')
+        //     calcObj = null
+        // })
+
+        beforeEach('creating calculation object before all the test cases', () => {
+            console.log('creating calculation object before current test cases')
+            calcObj = new Calculation()
+        })
+
+        afterEach('nullfying the object reference', () => {
+            console.log('nullfying the object reference after the current test case')
+            calcObj = null
+        })
+
+        it('dividing 12 by 3 and expecting 4', () => {
+            const actualRes = calcObj.divide(12, 3)
+            // const divide = (a: number, b: number) => {
+            //     if (b === 0)
+            //         throw new Error('denominator shoudnot be 0')
+
+            //     return a / b
+            // }
+
+            const expected = 3
+            expect(actualRes).to.equal(4)
+        })
+
+        it('testing error by passing 0 as denominator. should throw error', () => {
+            try {
+                calcObj.divide(12, 0)
+                // throw new AssertionError('not the DivideError Type')
+            } catch (error) {
+                // if (error instanceof AssertionError) {
+                //     assert.fail('not the type of error')
+                // }
+                if (error instanceof Error) {
+                    expect(error.message).to.equal(DIVIDE_BY_ZERO_ERROR_MESSAGE)
+                }
+            }
+        })
+    })

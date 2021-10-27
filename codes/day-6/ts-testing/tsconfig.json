@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "target": "ES3",
+        "rootDir": "src",
+        "outDir": "dist",
+        "lib": [
+            "DOM",
+            "ES2015"
+        ]
+    }
+}

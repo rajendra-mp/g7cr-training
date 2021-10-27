@@ -1,0 +1,12 @@
+### Sending Get Request
+GET http://localhost:3001/
+
+
+### POST Request
+POST  http://localhost:3001/
+
+Content-Type: application/json
+
+{
+    "name":"anil"
+}

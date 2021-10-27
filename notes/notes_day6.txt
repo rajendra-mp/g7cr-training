@@ -1,0 +1,8 @@
+mocha
+jasmine
+jest
+
+1. test suite (describe)
+2. test methods (cases) (it)
+
+chai - an assertion library
