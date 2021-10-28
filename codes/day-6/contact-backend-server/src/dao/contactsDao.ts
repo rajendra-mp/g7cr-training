@@ -1,17 +1,18 @@
 import { readFile, writeFile } from "fs"
-const FILE_PATH = process.env.FILE_PATH
+import { Contact } from "../models/contact"
 
-export const readRecords = () => {
-    const p = new Promise<any>(
+// const FILE_PATH = process.env.FILE_PATH
+
+export const readRecords = (): Promise<Contact[]> => {
+    const p = new Promise<Contact[]>(
         (resolveFn, rejectFn) => {
-            readFile(FILE_PATH, (err, data) => {
+            readFile(process.env.FILE_PATH, (err, data) => {
                 if (err) {
-                    console.log(err)
                     rejectFn('could not get records...try later')
                 }
 
                 if (data) {
-                    const all = JSON.parse(data.toString())
+                    const all = <Contact[]>JSON.parse(data.toString())
                     console.log(all)
                     resolveFn(all)
                 }
@@ -21,11 +22,11 @@ export const readRecords = () => {
     return p
 }
 
-export const saveRecords = (contacts) => {
+export const saveRecords = (contacts: Contact[]): Promise<string> => {
     const p = new Promise<string>(
         (resolveFn, rejectFn) => {
             writeFile(
-                FILE_PATH,
+                process.env.FILE_PATH,
                 JSON.stringify(contacts),
                 (err) => {
                     if (err) {

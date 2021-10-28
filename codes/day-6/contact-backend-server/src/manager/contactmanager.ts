@@ -1,18 +1,20 @@
 import { readRecords, saveRecords } from "../dao/contactsDao"
+import { Contact } from "../models/contact"
 
-export const fetchContacts = async () => {
+export const fetchContacts = async (): Promise<Contact[]> => {
     console.log('fetch called')
     const all = await readRecords()
-    if (all.length === 0) {    
+    if (all.length === 0) {
         return Promise.reject('no records found')
     } else {
-        return Promise.resolve(all)
+        return all
     }
 }
-export const addContact = async (contactData: any) => {
+
+export const addContact = async (contactData: Contact): Promise<string> => {
     const all = await readRecords()
     if (all.find(c => c.id === contactData.id)) {
-        return Promise.reject('record exists')
+        return 'record exists'
     } else {
         all.push(contactData)
         return saveRecords(all)

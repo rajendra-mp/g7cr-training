@@ -1,0 +1,13 @@
+1. routing configuration
+	a. Router
+		i.  get router moiddleware
+		ii. register routes and export the reconfigured router middleware from the 		    file
+		iii. register the re-configured router middleware with the express js 		    middleware pipeline
+2. validation of input data
+	a. express-validator
+		i. input data validation
+		ii. sanization
+3. exception/error handling
+		i. 
+4. authentication
+		i. jwt
