@@ -11,3 +11,31 @@
 		i. 
 4. authentication
 		i. jwt
+
+
+a. get all contact records
+b. get a contact by id (id should be a number)
+c. get all contacts where the name is like search criteria (name should contain at least a char)
+
+c. add contact (validation)
+d. update contact (validation)
+
+e. delete contact (should pass an id - number)
+
+f. register user (validation)
+g. validating user (validation)
+
+a. posiibility of input data present in the request:
+	i. body (req.body) {"p1":"v1"}
+	ii. params (req.params) http://localhost:<port-no>/<uri>/10
+	iii. query string (req.query) http://localhost:<port-no>/<uri>?id=10
+	iv. cookie (req.cookies)
+	v. header (req.headesr)
+
+
+
+
+
+
+
+
